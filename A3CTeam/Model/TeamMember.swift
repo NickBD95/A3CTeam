@@ -14,13 +14,13 @@ struct TeamMember {
     
     static func getTeamMember() -> [TeamMember] {
         let personData = PersonData()
-        var array: [TeamMember] = []
+        var arrayOfMembers: [TeamMember] = []
         for i in 0..<personData.names.count {
-            array.append(TeamMember(name: personData.names[i],
+            arrayOfMembers.append(TeamMember(name: personData.names[i],
                                     surname: personData.surnames[i],
                                     portrait: personData.portraits[i]))
         }
-        return array
+        return arrayOfMembers
     }
 }
 
@@ -31,13 +31,13 @@ struct Achivement {
     
     static func getAchivement() -> [Achivement] {
         let achivementData = AchivementsData()
-        var array: [Achivement] = []
+        var arrayOfAchivements: [Achivement] = []
         for i in 0..<achivementData.titles.count {
-            array.append(Achivement(title: achivementData.titles[i],
+            arrayOfAchivements.append(Achivement(title: achivementData.titles[i],
                                     subtitle: achivementData.subtitles[i],
                                     icon: achivementData.subtitles[i]))
         }
-        return array
+        return arrayOfAchivements
     }
     
 }
