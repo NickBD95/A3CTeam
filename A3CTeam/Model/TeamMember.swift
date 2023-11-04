@@ -11,7 +11,7 @@ struct TeamMember {
     var name: String
     var surname: String
     var portrait: String
-    
+//some code
     static func getTeamMember() -> [TeamMember] {
         let personData = PersonData()
         var arrayOfMembers: [TeamMember] = []
@@ -23,7 +23,7 @@ struct TeamMember {
         return arrayOfMembers
     }
 }
-
+//some code
 struct Achivement {
     var title: String
     var subtitle: String
