@@ -16,6 +16,8 @@
 		5134FBBA2AF39A49006607C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5134FBB82AF39A49006607C6 /* LaunchScreen.storyboard */; };
 		5134FBC72AF39CCB006607C6 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134FBC62AF39CCB006607C6 /* DataStore.swift */; };
 		5134FBCA2AF39D1D006607C6 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134FBC92AF39D1D006607C6 /* TeamMember.swift */; };
+		5134FC242AF675E5006607C6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134FC232AF675E5006607C6 /* ContactViewController.swift */; };
+		5134FC262AF677C0006607C6 /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5134FC252AF677C0006607C6 /* OrderData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5134FBBB2AF39A49006607C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5134FBC62AF39CCB006607C6 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		5134FBC92AF39D1D006607C6 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
+		5134FC232AF675E5006607C6 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		5134FC252AF677C0006607C6 /* OrderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5134FBB12AF39A47006607C6 /* ViewController.swift */,
+				5134FC232AF675E5006607C6 /* ContactViewController.swift */,
 				1A2BAACA2AF63FEF005EF072 /* TeamInfoViewController.swift */,
 			);
 			path = ViewControllers;
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5134FBC62AF39CCB006607C6 /* DataStore.swift */,
+				5134FC252AF677C0006607C6 /* OrderData.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5134FBB22AF39A47006607C6 /* ViewController.swift in Sources */,
+				5134FC242AF675E5006607C6 /* ContactViewController.swift in Sources */,
+				5134FC262AF677C0006607C6 /* OrderData.swift in Sources */,
 				1A2BAACB2AF63FEF005EF072 /* TeamInfoViewController.swift in Sources */,
 				5134FBC72AF39CCB006607C6 /* DataStore.swift in Sources */,
 				5134FBAE2AF39A47006607C6 /* AppDelegate.swift in Sources */,
