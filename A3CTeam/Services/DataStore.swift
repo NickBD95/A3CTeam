@@ -16,10 +16,6 @@ class PersonData {
                      "Grachev",
                      "Demin"
     ]
-    let portraits = ["KatyaP",
-                     "KolyaP",
-                     "LeshaP"
-    ]
 }
 
 class AchivementsData {

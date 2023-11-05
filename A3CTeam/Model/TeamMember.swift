@@ -10,15 +10,13 @@ import Foundation
 struct TeamMember {
     var name: String
     var surname: String
-    var portrait: String
 //some code
     static func getTeamMember() -> [TeamMember] {
         let personData = PersonData()
         var arrayOfMembers: [TeamMember] = []
         for i in 0..<personData.names.count {
             arrayOfMembers.append(TeamMember(name: personData.names[i],
-                                    surname: personData.surnames[i],
-                                    portrait: personData.portraits[i]))
+                                    surname: personData.surnames[i]))
         }
         return arrayOfMembers
     }
