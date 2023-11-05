@@ -30,9 +30,9 @@ class AchivementsData {
                      "The app abut traffic light switching colors"
                      
     ]
-    let icons = ["icon1",
-                 "icon2",
-                 "icon3",
-                 "icon4"
+    let icons = ["🙂 rating 5/5",
+                 "🎨 rating 4/5",
+                 "✉️ rating 5/5",
+                 "🚦 rating 4/5"
     ]
 }
