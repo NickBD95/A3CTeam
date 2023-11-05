@@ -7,10 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    
-    private let member = TeamMember.getTeamMember()
-    
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var katyaImage: UIImageView! {
         didSet {
@@ -35,7 +32,7 @@ class WelcomeViewController: UIViewController {
             teamImage.layer.cornerRadius = 20
         }
     }
-
+    
     @IBOutlet weak var findOutMoreButton: UIButton! {
         didSet {
             findOutMoreButton.layer.cornerRadius = 16
@@ -45,22 +42,29 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBOutlet weak var katyaLabel: UILabel!
-    
     @IBOutlet weak var leshaLabel: UILabel!
-    
     @IBOutlet weak var kolyaLabel: UILabel!
     
+    private let member = TeamMember.getTeamMember()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setPersonsPictures()
+        setPersonsNames()
+    }
+}
+
+extension WelcomeViewController {
+    
+    private func setPersonsPictures() {
         katyaImage.image = UIImage(named: member[0].name)
         leshaImage.image = UIImage(named: member[2].name)
         kolyaImage.image = UIImage(named: member[1].name)
-        
+    }
+    private func setPersonsNames() {
         katyaLabel.text = member[0].name
         leshaLabel.text = member[2].name
         kolyaLabel.text = member[1].name
     }
-    
-
 }
