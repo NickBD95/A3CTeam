@@ -7,7 +7,8 @@
 
 import Foundation
 
-class PersonData {
+final class PersonData {
+    
     let names = [ "Katya",
                   "Kolya",
                   "Lesha"
@@ -16,13 +17,10 @@ class PersonData {
                      "Grachev",
                      "Demin"
     ]
-    let portraits = ["KatyaP",
-                     "KolyaP",
-                     "LeshaP"
-    ]
 }
 
-class AchivementsData {
+final class AchivementsData {
+    
     let titles = ["About Me",
                   "RGB",
                   "Contact List",
@@ -34,9 +32,9 @@ class AchivementsData {
                      "The app abut traffic light switching colors"
                      
     ]
-    let icons = ["icon1",
-                 "icon2",
-                 "icon3",
-                 "icon4"
+    let rating = ["🙂 rating 5/5",
+                  "🎨 rating 4/5",
+                  "✉️ rating 5/5",
+                  "🚦 rating 4/5"
     ]
 }
