@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeamInfoViewController: UIViewController {
+final class TeamInfoViewController: UIViewController {
     
     @IBOutlet weak var achivementTableView: UITableView!
     
@@ -21,25 +21,38 @@ class TeamInfoViewController: UIViewController {
     }
 }
 
-extension TeamInfoViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print("you tapped me!")
-    }
-}
-
-extension TeamInfoViewController: UITableViewDataSource {
+extension TeamInfoViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        4
+        achivements.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        achivements[section].title
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let achivement = achivements[indexPath.section]
+        var content = cell.defaultContentConfiguration()
+        
+        if indexPath.row == 0 {
+            content.text = achivement.subtitle
+            cell.selectionStyle = .none
+            cell.contentConfiguration = content
+            
+        } else if indexPath.row == 1 {
+            content.text = achivement.rating
+            cell.selectionStyle = .none
+            cell.contentConfiguration = content
+            
+        }
+        
         return cell
     }
 }
-
-    

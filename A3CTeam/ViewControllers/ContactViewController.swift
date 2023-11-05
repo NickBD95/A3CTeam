@@ -24,24 +24,33 @@ final class ContactViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
-        if nameTF.text == emptyField || emailTF.text == emptyField || subjectTF.text == emptyField || messageTF.text == emptyField  {
+        
+        if nameTF.text == emptyField ||
+            emailTF.text == emptyField ||
+            subjectTF.text == emptyField ||
+            messageTF.text == emptyField{ //просим проккоментировать, как оптимизировать и эту проверку
             showAlert(with: "One or more fields is empty!", and: "Please fill all fields.")
+            
         } else if !isValidEmail(emailTF.text ?? "") {
             showAlert(with: "Invalid address!", and: "Please enter a correct email.")
+            
         } else {
             showAlert(with: "Your message has been sent.", and: "Please wait for a response.")
-            fillOrderLists()
+            fillOrderData()
             clearAllFiedls()
         }
     }
 }
+
 extension ContactViewController {
     private func showAlert(with title: String, and message: String, textField: UITextField? = nil) {
+        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Close", style: .default)
         
@@ -49,7 +58,8 @@ extension ContactViewController {
         present(alert, animated: true)
     }
     
-    private func fillOrderLists() {
+    private func fillOrderData() {
+        
         names.append(nameTF.text ?? "")
         emails.append(emailTF.text ?? "")
         subjects.append(subjectTF.text ?? "")
@@ -57,6 +67,7 @@ extension ContactViewController {
     }
     
     private func clearAllFiedls() {
+        
         nameTF.text = emptyField
         emailTF.text = emptyField
         subjectTF.text = emptyField
@@ -64,13 +75,15 @@ extension ContactViewController {
     }
     
     private func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
         return emailPred.evaluate(with: email)
     }
     
     private func setSendButton() {
+        
         sendButton.layer.cornerRadius = 10
         sendButton.layer.borderWidth = 1
         sendButton.layer.borderColor = UIColor.black.cgColor

@@ -7,6 +7,8 @@
 
 import Foundation
 
+/*мы сымитировали базу данных, сюда собирается заявки при
+ заполнении последней формы, после отправки по кнопке Send */
 var names: [String] = []
 var emails: [String] = []
 var subjects: [String] = []
